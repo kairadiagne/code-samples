@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageDownloadViewController" customModule="ProgressExample" customModuleProvider="target">
+            <connections>
+                <outlet property="downloadButton" destination="Bdj-AL-EAv" id="OQC-xp-HiL"/>
+                <outlet property="imageView" destination="BIJ-Wp-4aN" id="PJB-Jz-HCt"/>
+                <outlet property="progressDescriptionLabel" destination="RiJ-5v-wXM" id="DJJ-la-TaQ"/>
+                <outlet property="progressLabel" destination="eYi-8M-dFO" id="xZF-Co-Irc"/>
+                <outlet property="progressView" destination="rvU-ZE-ej6" id="eM5-rP-vqX"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zSW-u5-cEL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BIJ-Wp-4aN">
+                    <rect key="frame" x="20" y="40" width="335" height="446"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nYB-Ga-ayj">
+                    <rect key="frame" x="20" y="506" width="335" height="49"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiJ-5v-wXM">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYi-8M-dFO">
+                            <rect key="frame" x="0.0" y="28.5" width="335" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rvU-ZE-ej6">
+                    <rect key="frame" x="20" y="575" width="335" height="2"/>
+                </progressView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdj-AL-EAv">
+                    <rect key="frame" x="130.5" y="617" width="114" height="30"/>
+                    <state key="normal" title="Download image"/>
+                    <connections>
+                        <action selector="downloadAction:" destination="-1" eventType="touchUpInside" id="1S3-c2-gji"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Bdj-AL-EAv" firstAttribute="top" secondItem="rvU-ZE-ej6" secondAttribute="bottom" constant="40" id="2DK-7W-UeC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Bdj-AL-EAv" secondAttribute="bottom" constant="20" id="FdZ-QE-9Qb"/>
+                <constraint firstAttribute="trailing" secondItem="rvU-ZE-ej6" secondAttribute="trailing" constant="20" id="Iid-XL-Tcq"/>
+                <constraint firstItem="nYB-Ga-ayj" firstAttribute="top" secondItem="BIJ-Wp-4aN" secondAttribute="bottom" constant="20" id="aO2-3A-dnh"/>
+                <constraint firstItem="rvU-ZE-ej6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="asw-d2-t9G"/>
+                <constraint firstItem="nYB-Ga-ayj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bpT-rc-qwf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BIJ-Wp-4aN" secondAttribute="trailing" constant="20" id="iSR-kV-NAr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nYB-Ga-ayj" secondAttribute="trailing" constant="20" id="mNV-NW-Nhz"/>
+                <constraint firstItem="Bdj-AL-EAv" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="oNQ-gX-jl3"/>
+                <constraint firstItem="BIJ-Wp-4aN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="rKU-Ky-LzJ"/>
+                <constraint firstItem="rvU-ZE-ej6" firstAttribute="top" secondItem="nYB-Ga-ayj" secondAttribute="bottom" constant="20" id="sQO-ab-aAG"/>
+                <constraint firstItem="BIJ-Wp-4aN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="wo2-uX-szb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="104.8" y="52.623688155922046"/>
+        </view>
+    </objects>
+</document>
